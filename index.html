@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hritvik Bollepalli | Quantitative Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════ CURSOR GLOW ══════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">HB</span>
+        <div class="logo-ring"></div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-hero" style="--d:0">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name reveal-hero" style="--d:1">
+        <span class="name-line">Hritvik</span>
+        <span class="name-line accent-gradient">Bollepalli</span>
+      </h1>
+
+      <div class="hero-role reveal-hero" style="--d:2">
+        <span class="role-prefix">I'm a </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-bio reveal-hero" style="--d:3">
+        Quantitative Analyst with <strong>4+ years</strong> of experience in fixed income &amp; multi-asset
+        portfolio optimization, investment process engineering, and scalable Python/SQL software
+        development across <strong>100+ SMA-style client mandates</strong>.
+      </p>
+
+      <div class="hero-actions reveal-hero" style="--d:4">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          View My Work
+        </a>
+        <a href="Hritvik_Bollepalli_BlackRock_SMA_QuantAnalyst.pdf" download class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+
+      <div class="hero-stats reveal-hero" style="--d:5">
+        <div class="stat-item">
+          <div class="stat-num" data-target="4">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-lbl">Years Experience</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="100">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-lbl">Client Mandates</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="99">0</div>
+          <div class="stat-suffix">.9%</div>
+          <div class="stat-lbl">Compliance Reliability</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="70">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-lbl">Runtime Reduction</div>
+        </div>
+      </div>
+
+      <div class="hero-socials reveal-hero" style="--d:6">
+        <a href="https://github.com/rithwiksai3000" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/bollepalli-hritvik-652169171/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:rithwiksai3000@gmail.com" class="social-link" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll">
+      <div class="scroll-wheel"></div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ══════════════════════ ABOUT ══════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">About Me</span>
+        </div>
+        <h2 class="section-title">Turning Complexity Into <span class="accent-gradient">Clarity</span></h2>
+        <p class="section-subtitle">Bridging quantitative finance and engineering to build systems that scale</p>
+      </div>
+
+      <div class="about-layout reveal">
+        <div class="about-text-col">
+          <p>
+            I'm a <strong>Quantitative Analyst</strong> based in Hartford, CT, specializing in
+            fixed income portfolio optimization, compliance automation, and scalable data engineering.
+            At <strong>Western &amp; Southern Financial Group</strong>, I build the software and analytical
+            frameworks that sit at the intersection of investment strategy and technology.
+          </p>
+          <p>
+            My work spans Python-based rebalancing engines, SQL compliance systems with
+            <strong>99.9% diagnostic reliability</strong>, backtesting frameworks across historical market
+            scenarios, and executive BI reporting that directly informs portfolio manager decisions.
+          </p>
+          <p>
+            I hold a <strong>Master's in Business Analytics &amp; Project Management</strong> from
+            UConn and am a <strong>CFA Level 1 Candidate</strong>, continuously sharpening my edge at the
+            crossroads of quant finance and software engineering.
+          </p>
+          <div class="about-meta">
+            <div class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Hartford, Connecticut
+            </div>
+            <div class="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              Western &amp; Southern Financial Group
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards-col">
+          <div class="glass-card about-highlight-card">
+            <div class="card-glow card-glow-blue"></div>
+            <div class="highlight-row">
+              <div class="highlight-icon cyan">📊</div>
+              <div>
+                <div class="highlight-label">Current Role</div>
+                <div class="highlight-value">Quantitative Analyst</div>
+              </div>
+            </div>
+            <div class="highlight-row">
+              <div class="highlight-icon purple">🎓</div>
+              <div>
+                <div class="highlight-label">Education</div>
+                <div class="highlight-value">MS Business Analytics — UConn, 2024</div>
+              </div>
+            </div>
+            <div class="highlight-row">
+              <div class="highlight-icon green">📈</div>
+              <div>
+                <div class="highlight-label">Specialization</div>
+                <div class="highlight-value">Fixed Income &amp; Multi-Asset Optimization</div>
+              </div>
+            </div>
+            <div class="highlight-row">
+              <div class="highlight-icon orange">🏆</div>
+              <div>
+                <div class="highlight-label">Certification</div>
+                <div class="highlight-value">CFA Level 1 Candidate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SKILLS ══════════════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">Toolkit</span>
+        </div>
+        <h2 class="section-title">Skills &amp; <span class="accent-gradient">Technologies</span></h2>
+        <p class="section-subtitle">A comprehensive stack spanning quant finance, engineering, and data science</p>
+      </div>
+
+      <div class="skills-bento reveal">
+
+        <div class="skill-block block-wide glass-card">
+          <div class="card-glow card-glow-blue"></div>
+          <div class="skill-block-icon">⚡</div>
+          <h3>Python &amp; Engineering</h3>
+          <div class="pill-group">
+            <span class="pill pill-cyan">Python</span>
+            <span class="pill pill-cyan">Pandas</span>
+            <span class="pill pill-cyan">NumPy</span>
+            <span class="pill pill-cyan">Scikit-learn</span>
+            <span class="pill pill-cyan">PySpark</span>
+            <span class="pill pill-cyan">SQL (Advanced)</span>
+            <span class="pill pill-cyan">R</span>
+            <span class="pill pill-cyan">VBA / Excel</span>
+            <span class="pill pill-cyan">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-block glass-card">
+          <div class="card-glow card-glow-purple"></div>
+          <div class="skill-block-icon">📉</div>
+          <h3>Portfolio &amp; Optimization</h3>
+          <div class="pill-group">
+            <span class="pill pill-purple">Portfolio Optimization</span>
+            <span class="pill pill-purple">SMA Rebalancing</span>
+            <span class="pill pill-purple">Factor Investing</span>
+            <span class="pill pill-purple">Guideline Enforcement</span>
+            <span class="pill pill-purple">Backtesting</span>
+          </div>
+        </div>
+
+        <div class="skill-block glass-card">
+          <div class="card-glow card-glow-green"></div>
+          <div class="skill-block-icon">🏦</div>
+          <h3>Fixed Income</h3>
+          <div class="pill-group">
+            <span class="pill pill-green">Duration</span>
+            <span class="pill pill-green">Convexity</span>
+            <span class="pill pill-green">Carry</span>
+            <span class="pill pill-green">Tracking Error</span>
+            <span class="pill pill-green">IG/HY/Muni</span>
+            <span class="pill pill-green">Benchmark Attribution</span>
+          </div>
+        </div>
+
+        <div class="skill-block glass-card">
+          <div class="card-glow card-glow-blue"></div>
+          <div class="skill-block-icon">☁️</div>
+          <h3>Platforms &amp; APIs</h3>
+          <div class="pill-group">
+            <span class="pill pill-cyan">Bloomberg Terminal</span>
+            <span class="pill pill-cyan">FactSet</span>
+            <span class="pill pill-cyan">Snowflake</span>
+            <span class="pill pill-cyan">AWS S3</span>
+            <span class="pill pill-cyan">GCP BigQuery</span>
+            <span class="pill pill-cyan">Alteryx</span>
+            <span class="pill pill-cyan">dbt</span>
+          </div>
+        </div>
+
+        <div class="skill-block glass-card">
+          <div class="card-glow card-glow-orange"></div>
+          <div class="skill-block-icon">🤖</div>
+          <h3>AI &amp; Machine Learning</h3>
+          <div class="pill-group">
+            <span class="pill pill-orange">XGBoost</span>
+            <span class="pill pill-orange">Isolation Forest</span>
+            <span class="pill pill-orange">Monte Carlo Simulation</span>
+            <span class="pill pill-orange">RAG / LangChain</span>
+            <span class="pill pill-orange">Regression</span>
+            <span class="pill pill-orange">Classification</span>
+          </div>
+        </div>
+
+        <div class="skill-block glass-card">
+          <div class="card-glow card-glow-purple"></div>
+          <div class="skill-block-icon">📊</div>
+          <h3>BI &amp; Visualization</h3>
+          <div class="pill-group">
+            <span class="pill pill-purple">Tableau</span>
+            <span class="pill pill-purple">Power BI (DAX)</span>
+            <span class="pill pill-purple">Streamlit</span>
+            <span class="pill pill-purple">Performance Reporting</span>
+          </div>
+        </div>
+
+        <div class="skill-block block-wide glass-card">
+          <div class="card-glow card-glow-green"></div>
+          <div class="skill-block-icon">🔧</div>
+          <h3>Data Engineering</h3>
+          <div class="pill-group">
+            <span class="pill pill-green">ETL/ELT Pipeline Design</span>
+            <span class="pill pill-green">Scalable Data Architecture</span>
+            <span class="pill pill-green">Data Quality &amp; Reliability</span>
+            <span class="pill pill-green">CI/CD</span>
+            <span class="pill pill-green">Compliance Automation</span>
+            <span class="pill pill-green">Automated Validation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EXPERIENCE ══════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">Career</span>
+        </div>
+        <h2 class="section-title">Work <span class="accent-gradient">Experience</span></h2>
+        <p class="section-subtitle">4+ years building quantitative solutions at the intersection of finance and technology</p>
+      </div>
+
+      <div class="timeline-wrapper">
+
+        <!-- Job 1 -->
+        <div class="timeline-entry reveal">
+          <div class="timeline-left">
+            <div class="tl-dot">
+              <div class="tl-dot-inner"></div>
+            </div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="timeline-right">
+            <div class="glass-card tl-card">
+              <div class="card-glow card-glow-blue"></div>
+              <div class="tl-header">
+                <div class="tl-title-group">
+                  <span class="tl-company">Western &amp; Southern Financial Group</span>
+                  <h3 class="tl-role">Quantitative Analyst — Portfolio Optimization &amp; Investment Process</h3>
+                  <span class="tl-location">📍 Ohio, USA</span>
+                </div>
+                <div class="tl-meta">
+                  <span class="tl-period current">Sept 2023 – Present</span>
+                  <span class="tl-badge badge-current">Current</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Developed Python-based portfolio optimization solutions for fixed income &amp; multi-asset mandates (IG, HY, Muni) processing <strong>100+ client mandates simultaneously</strong>, enforcing constraints on duration, convexity, and benchmark deviation</li>
+                <li>Built SQL-based compliance management framework achieving <strong>99.9% reliability</strong> on regulatory diagnostic alerts across 100+ portfolios with zero tolerance for false negatives</li>
+                <li>Performed large-scale backtesting of fixed income analytics — automating duration, convexity, carry &amp; tracking error calculations, <strong>reducing query runtimes by 30%</strong></li>
+                <li>Served as the quantitative bridge between portfolio managers and software — translating investment strategy into technical optimization specifications across the SMA Solutions platform</li>
+                <li>Delivered factor-based return &amp; risk attribution reporting for ETFs and closed-end funds using Tableau and Power BI for senior PMs and external clients</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Portfolio Optimization</span>
+                <span class="tag">Bloomberg</span><span class="tag">Tableau</span><span class="tag">Power BI</span>
+                <span class="tag">Fixed Income</span><span class="tag">SMA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-entry reveal">
+          <div class="timeline-left">
+            <div class="tl-dot">
+              <div class="tl-dot-inner"></div>
+            </div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="timeline-right">
+            <div class="glass-card tl-card">
+              <div class="card-glow card-glow-purple"></div>
+              <div class="tl-header">
+                <div class="tl-title-group">
+                  <span class="tl-company">L Brands</span>
+                  <h3 class="tl-role">Data Analyst — Capital Markets &amp; Quantitative Analytics</h3>
+                  <span class="tl-location">📍 Columbus, Ohio</span>
+                </div>
+                <div class="tl-meta">
+                  <span class="tl-period">Jan 2023 – Aug 2023</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Engineered scalable Python &amp; SQL data pipelines for portfolio accounting data — <strong>reducing discrepancies by 22%</strong> and ensuring data quality for senior investment leadership</li>
+                <li>Automated treasury &amp; cash flow optimization reporting in Tableau, <strong>recovering 15+ hours of weekly team productivity</strong> and delivering real-time visibility into fund performance</li>
+                <li>Analyzed macro trends and credit market data using Python, SQL, VBA, and Excel to support factor investing analysis and financial valuation modeling</li>
+                <li>Maintained data governance documentation for financial pipelines, ensuring audit-ready lineage for all regulatory and compliance reporting</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Tableau</span>
+                <span class="tag">VBA</span><span class="tag">Data Pipelines</span><span class="tag">Capital Markets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="timeline-entry reveal">
+          <div class="timeline-left">
+            <div class="tl-dot">
+              <div class="tl-dot-inner"></div>
+            </div>
+          </div>
+          <div class="timeline-right">
+            <div class="glass-card tl-card">
+              <div class="card-glow card-glow-green"></div>
+              <div class="tl-header">
+                <div class="tl-title-group">
+                  <span class="tl-company">Sanofi</span>
+                  <h3 class="tl-role">Data Analyst — Quantitative Analytics &amp; Process Engineering</h3>
+                  <span class="tl-location">📍 Hyderabad, India</span>
+                </div>
+                <div class="tl-meta">
+                  <span class="tl-period">Mar 2021 – Jul 2022</span>
+                </div>
+              </div>
+              <ul class="tl-bullets">
+                <li>Achieved <strong>70% reduction</strong> in automated reporting query runtime by redesigning ETL pipelines and refactoring SQL logic — eliminating bottlenecks in time-sensitive regulatory reporting</li>
+                <li>Applied statistical modeling and large-scale sample testing to develop validated, cleansed datasets supporting regulatory and tax reporting</li>
+                <li>Built Business Process Maps documenting As-Is vs. To-Be optimization workflows — improving cross-functional analytical consistency across technical and non-technical teams</li>
+              </ul>
+              <div class="tl-tags">
+                <span class="tag">SQL</span><span class="tag">ETL Pipelines</span><span class="tag">Statistical Modeling</span>
+                <span class="tag">Process Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">Featured Work</span>
+        </div>
+        <h2 class="section-title">Projects &amp; <span class="accent-gradient">Builds</span></h2>
+        <p class="section-subtitle">End-to-end solutions at the frontier of quantitative finance and AI</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card glass-card reveal project-featured">
+          <div class="card-glow card-glow-blue"></div>
+          <div class="project-top">
+            <div class="project-icon-wrap cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="project-links-row">
+              <span class="featured-badge">Featured</span>
+              <a href="https://github.com/rithwiksai3000" target="_blank" rel="noopener" class="icon-btn" title="View on GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Financial Engineering Dashboard</h3>
+          <p class="project-subtitle">Equity Portfolio Analytics Platform</p>
+          <p class="project-desc">
+            Full-stack portfolio optimization platform delivering <strong>10-KPI fundamental &amp; technical
+            analysis</strong> on any publicly traded equity in under 60 seconds — compressing 3–4 hours of
+            institutional research into a sub-minute interactive output.
+          </p>
+          <div class="project-highlights">
+            <div class="ph-item">
+              <span class="ph-icon">🎯</span>
+              <span>Monte Carlo scenario analysis across <strong>10,000+ simulation paths</strong></span>
+            </div>
+            <div class="ph-item">
+              <span class="ph-icon">🤖</span>
+              <span>XGBoost + Isolation Forest for factor-based signal generation</span>
+            </div>
+            <div class="ph-item">
+              <span class="ph-icon">💬</span>
+              <span>LangChain RAG chatbot for contextual financial data querying</span>
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">XGBoost</span>
+            <span class="tag">Streamlit</span><span class="tag">LangChain</span><span class="tag">RAG</span>
+            <span class="tag">SQL</span><span class="tag">Monte Carlo</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="card-glow card-glow-purple"></div>
+          <div class="project-top">
+            <div class="project-icon-wrap purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">SMA Compliance Engine</h3>
+          <p class="project-subtitle">Portfolio Guideline Enforcement at Scale</p>
+          <p class="project-desc">
+            SQL-based compliance management framework monitoring <strong>100+ portfolios simultaneously</strong>
+            with real-time investment guideline enforcement, achieving 99.9% diagnostic reliability
+            under daily production load.
+          </p>
+          <div class="project-result-pill green">99.9% Reliability · Zero False Negatives</div>
+          <div class="project-tech">
+            <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Compliance Automation</span><span class="tag">SMA</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="card-glow card-glow-green"></div>
+          <div class="project-top">
+            <div class="project-icon-wrap green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">Fixed Income Backtesting Framework</h3>
+          <p class="project-subtitle">Automated Analytics Validation</p>
+          <p class="project-desc">
+            Automated Python and R backtesting framework for fixed income analytics — computing duration,
+            convexity, carry, and tracking error across historical scenarios with <strong>30% runtime reduction</strong>.
+          </p>
+          <div class="project-result-pill cyan">30% Runtime Reduction</div>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">R</span><span class="tag">Backtesting</span><span class="tag">Fixed Income</span>
+          </div>
+        </div>
+
+        <div class="project-card glass-card reveal">
+          <div class="card-glow card-glow-orange"></div>
+          <div class="project-top">
+            <div class="project-icon-wrap orange">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title">Treasury Reporting Automation</h3>
+          <p class="project-subtitle">Real-Time Fund Performance Dashboards</p>
+          <p class="project-desc">
+            Automated treasury and cash flow optimization reporting in Tableau, delivering real-time
+            visibility into fund performance and liquidity — <strong>recovering 15+ hours of weekly productivity</strong>.
+          </p>
+          <div class="project-result-pill orange">15+ Hours Saved Weekly</div>
+          <div class="project-tech">
+            <span class="tag">Tableau</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Cash Flow</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EDUCATION ══════════════════════ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">Academic</span>
+        </div>
+        <h2 class="section-title">Education &amp; <span class="accent-gradient">Certifications</span></h2>
+      </div>
+
+      <div class="edu-grid">
+
+        <div class="glass-card edu-card reveal">
+          <div class="card-glow card-glow-blue"></div>
+          <div class="edu-icon-wrap cyan">🎓</div>
+          <div class="edu-content">
+            <span class="edu-type">Master of Science</span>
+            <h3 class="edu-degree">Business Analytics &amp; Project Management</h3>
+            <p class="edu-school">University of Connecticut</p>
+            <span class="edu-year">Graduated 2024</span>
+          </div>
+        </div>
+
+        <div class="cert-grid reveal">
+          <div class="glass-card cert-card">
+            <div class="card-glow card-glow-orange"></div>
+            <div class="cert-icon">🏅</div>
+            <div class="cert-info">
+              <div class="cert-name">CFA Level 1 Candidate</div>
+              <div class="cert-issuer">CFA Institute</div>
+              <span class="cert-badge in-progress">In Progress</span>
+            </div>
+          </div>
+          <div class="glass-card cert-card">
+            <div class="card-glow card-glow-blue"></div>
+            <div class="cert-icon">📊</div>
+            <div class="cert-info">
+              <div class="cert-name">Google Data Analytics</div>
+              <div class="cert-issuer">Google</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="glass-card cert-card">
+            <div class="card-glow card-glow-purple"></div>
+            <div class="cert-icon">📈</div>
+            <div class="cert-info">
+              <div class="cert-name">Tableau Desktop Specialist</div>
+              <div class="cert-issuer">Tableau</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+          <div class="glass-card cert-card">
+            <div class="card-glow card-glow-green"></div>
+            <div class="cert-icon">⚡</div>
+            <div class="cert-info">
+              <div class="cert-name">Power BI Data Analyst</div>
+              <div class="cert-issuer">Microsoft</div>
+              <span class="cert-badge completed">Completed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ HOBBIES ══════════════════════ -->
+  <section id="hobbies" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">Beyond Work</span>
+        </div>
+        <h2 class="section-title">Hobbies &amp; <span class="accent-gradient">Interests</span></h2>
+        <p class="section-subtitle">What I do when I'm not building models or dashboards</p>
+      </div>
+      <div class="hobbies-grid reveal">
+        <!-- Update these with your actual hobbies -->
+        <div class="hobby-card glass-card">
+          <div class="hobby-emoji">⚽</div>
+          <span class="hobby-name">[Your Hobby]</span>
+        </div>
+        <div class="hobby-card glass-card">
+          <div class="hobby-emoji">🎵</div>
+          <span class="hobby-name">[Your Hobby]</span>
+        </div>
+        <div class="hobby-card glass-card">
+          <div class="hobby-emoji">📚</div>
+          <span class="hobby-name">[Your Hobby]</span>
+        </div>
+        <div class="hobby-card glass-card">
+          <div class="hobby-emoji">🏔️</div>
+          <span class="hobby-name">[Your Hobby]</span>
+        </div>
+        <div class="hobby-card glass-card">
+          <div class="hobby-emoji">🍳</div>
+          <span class="hobby-name">[Your Hobby]</span>
+        </div>
+        <div class="hobby-card glass-card">
+          <div class="hobby-emoji">✈️</div>
+          <span class="hobby-name">[Your Hobby]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CONTACT ══════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label-wrap">
+          <span class="section-label">Get In Touch</span>
+        </div>
+        <h2 class="section-title">Let's <span class="accent-gradient">Connect</span></h2>
+        <p class="section-subtitle">Open to quant finance, data engineering, and analytics opportunities</p>
+      </div>
+
+      <div class="contact-layout reveal">
+        <div class="contact-left">
+          <p class="contact-intro">
+            Whether you're looking to discuss quantitative strategies, explore collaboration,
+            or just connect — I'd love to hear from you.
+          </p>
+          <div class="contact-cards">
+            <a href="mailto:rithwiksai3000@gmail.com" class="contact-card glass-card">
+              <div class="card-glow card-glow-blue"></div>
+              <div class="cc-icon cyan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="cc-text">
+                <div class="cc-label">Email</div>
+                <div class="cc-value">rithwiksai3000@gmail.com</div>
+              </div>
+              <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/bollepalli-hritvik-652169171/" target="_blank" rel="noopener" class="contact-card glass-card">
+              <div class="card-glow card-glow-purple"></div>
+              <div class="cc-icon purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="cc-text">
+                <div class="cc-label">LinkedIn</div>
+                <div class="cc-value">bollepalli-hritvik</div>
+              </div>
+              <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/rithwiksai3000" target="_blank" rel="noopener" class="contact-card glass-card">
+              <div class="card-glow card-glow-green"></div>
+              <div class="cc-icon green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="cc-text">
+                <div class="cc-label">GitHub</div>
+                <div class="cc-value">rithwiksai3000</div>
+              </div>
+              <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="Hritvik_Bollepalli_BlackRock_SMA_QuantAnalyst.pdf" download class="contact-card glass-card">
+              <div class="card-glow card-glow-orange"></div>
+              <div class="cc-icon orange">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <div class="cc-text">
+                <div class="cc-label">Resume</div>
+                <div class="cc-value">Download PDF</div>
+              </div>
+              <svg class="cc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contactForm" action="mailto:rithwiksai3000@gmail.com" method="post" enctype="text/plain">
+          <div class="card-glow card-glow-blue"></div>
+          <h3 class="form-title">Send a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or inquiry..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">HB</span>
+        <p>Hritvik Bollepalli &copy; <span id="year"></span></p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
